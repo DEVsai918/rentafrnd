@@ -1,0 +1,7 @@
+{
+  "name": "RentAFrnd",
+  "description": "A platform that connects travelers with local companions for real-life experiences based on mood and activity.",
+  "requestFramePermissions": [
+    "geolocation"
+  ]
+}
