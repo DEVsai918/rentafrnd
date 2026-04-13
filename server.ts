@@ -67,7 +67,7 @@ async function startServer() {
       smtpStatus.configured = true;
 
       transporter = nodemailer.createTransport({
-        host: "smtp.hostinger.com",
+        host: "smtp.gmail.com",
         port: 587,
         secure: false,
         auth: {
