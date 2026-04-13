@@ -287,7 +287,7 @@ async function startServer() {
     });
   }
 
-  app.listen(PO RT, "0.0.0.0", () => {
+  app.listen(PO , "0.0.0.0", () => {
     console.log(`Server running on port ${PORT}`);
   });
 }
