@@ -100,7 +100,7 @@ export default function App() {
   useEffect(() => {
     const checkConfig = async () => {
       try {
-        const res = await fetch('/api/config-status');
+        const res = await fetch('https://www.rentafrnd.in/api/config-status');
         const data = await res.json();
         setConfigStatus(data);
       } catch (err) {
@@ -140,7 +140,7 @@ export default function App() {
 
     // Notify server
     try {
-      const response = await fetch('/api/notify-booking', {
+      const response = await fetch('https://www.rentafrnd.in/api/notify-booking'){
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
@@ -173,7 +173,7 @@ export default function App() {
     setIsSubscribing(true);
     setNotificationError(null);
     try {
-      const response = await fetch('/api/subscribe', {
+      const response = await fetch('https://www.rentafrnd.in/api/subscribe') {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ email: subscribeEmail })
