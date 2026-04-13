@@ -64,7 +64,7 @@ export const ContactPage = () => {
   const [status, setStatus] = useState<'idle' | 'sending' | 'success' | 'error'>('idle');
 
   const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
+    e.preventDefault();s
     if (!formData.name || !formData.email || !formData.message) return;
     
     setStatus('sending');
