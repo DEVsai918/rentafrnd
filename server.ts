@@ -70,20 +70,17 @@ async function startServer() {
       console.log("Initializing SMTP: host=smtp.hostinger.com, port=465, user=" + (user ? user : "MISSING"));
       
       transporter = nodemailer.createTransport({
-        host: "smtp.hostinger.com",
-        port: 465,
-        secure: true, // Use SSL for Hostinger
-        auth: {
-          user: user,
-          pass: pass,
-        },
-        debug: true,
-        logger: true,
-        tls: {
-          rejectUnauthorized: false,
-          minVersion: "TLSv1.2"
-        }
-      });
+      host: "smtp.hostinger.com",
+      port: 587,
+      secure: false,
+      auth: {
+      user: user,
+      pass: pass,
+      },
+      tls: {
+      rejectUnauthorized: false
+      }
+     });
 
       // Verify connection configuration
       transporter.verify(function (error, success) {
@@ -290,7 +287,7 @@ async function startServer() {
     });
   }
 
-  app.listen(PORT, "0.0.0.0", () => {
+  app.listen(PO RT, "0.0.0.0", () => {
     console.log(`Server running on port ${PORT}`);
   });
 }
